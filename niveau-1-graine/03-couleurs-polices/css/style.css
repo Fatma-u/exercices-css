@@ -5,34 +5,76 @@
 
 /* TODO 1 : déclarez ici les couleurs et les polices de la charte graphique (variables) */
 :root {
+  --vert:#2e7d32;
+  --vert-fonce:#1b5e20;
+  --terre:#6d4c41;
+  --soleil:#f9a825;
+  --creme:#fffaf0;
+  --texte:#1f2a1f;
+  --police-titres:Georgia, "Times New Roman", serif;
+  --police-texte:system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, sans-serif;
 
 }
 
 /* TODO 2 : fond, couleur du texte, police du texte et interligne de toute la page */
 body {
-
+  background-color:var(--creme);
+  color:var(--texte);
+  font-family:var(--police-texte);
+  line-height: 1.6;
 }
 
 /* TODO 3 : police et couleur des grands titres (h1 et h2) */
-
+h1,h2{
+  font-family:var(--police-titres);
+  color:var(--vert);
+}
 
 /* TODO 4 : tailles des titres en rem (h1, h2, h3) */
-
+h1{
+  font-size:2.5rem;
+}
+h2{
+  font-size:1.75rem;
+}
+h3{
+  font-size:1rem;
+}
 
 /* TODO 5 : les intertitres h3 (Ingrédients, Préparation) : majuscules, espacés, couleur d'accent */
-
+h3{
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color:var(--terre);
+}
 
 /* TODO 6 : la ligne d'informations .infos */
 
+.infos,figcaption{
+  font-size:0.9rem;
+  font-style: italic;
+
+}
 
 /* TODO 7 : l'encadré .astuce */
-
+.astuce{
+  background-color: rgb(249 168 37 / 0.2);
+  border-left: 4px solid var(--soleil);
+  padding: 0.75rem 1rem;
+}
 
 /* TODO 8 : les liens */
-
+a{
+  color:var(--vert-fonce);
+  text-decoration-color: var(--soleil);
+}
 
 /* TODO 9 : la longueur des lignes du contenu principal */
+header,main,footer{
+  max-width: 70ch;   /* 70 fois la largeur du caractère « 0 » */
+  margin: 0 auto;    /* centre la colonne (expliqué à l'exercice 04) */
 
+}
 
 /* ----- Déjà fait : les images (on verra pourquoi à l'exercice 04) ----- */
 figure {
