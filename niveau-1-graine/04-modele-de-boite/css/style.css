@@ -4,7 +4,11 @@
    ===================================================== */
 
 /* TODO 5 : la règle box-sizing s'écrit ICI, tout en haut du fichier (étape 5) */
-
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 /* ----- Déjà fait : la charte graphique (exercice 03) ----- */
 :root {
@@ -24,6 +28,7 @@ body {
   color: var(--texte);
   font-family: var(--police-texte);
   line-height: 1.6;
+  
 }
 
 h1,
@@ -45,25 +50,61 @@ h2 {
 /* ----- À vous : le modèle de boîte ----- */
 
 /* TODO 1 : supprimez la marge par défaut du body */
-
+body{
+  margin: 0;
+}
 
 /* TODO 2 : l'en-tête : fond vert clair, bordure basse, marges intérieures, texte centré */
-
+header{
+  background-color:var(--vert-clair);
+  border-bottom: 4px solid var(--vert);
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+}
 
 /* TODO 3 : le contenu principal : une colonne de 40rem maximum, centrée */
-
+main{
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
 
 /* TODO 4 : chaque .sachet devient une carte */
-
+.sachet{
+  border:2px solid var(--bordure);
+  border-radius: 12px;
+  padding:1.5rem;
+  margin-bottom:2rem;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.08);
+}
 
 /* TODO 6 : les images des sachets */
-
+.sachet img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem;
+  border-radius: 8px;
+}
 
 /* TODO 7 : le badge */
+.badge {
+  background-color: var(--soleil);
+  border-radius: 999px;
+  display: inline-block;
+  padding: 0.2rem 0.75rem;
+  margin-right: 0.5rem;
+}
 
 
 /* TODO 8 : l'ombre des cartes (ajoutez-la dans la règle .sachet) */
 
 
 /* TODO 9 : le pied de page */
-
+footer{
+  margin-top:3rem;
+  padding: 1.5rem 1rem;
+  border-top: 2px solid var(--bordure);
+  text-align: center;
+  font-size: 0.9rem;
+}
